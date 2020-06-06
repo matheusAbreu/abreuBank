@@ -1,14 +1,12 @@
 import React from 'react';
 import {StatusBar} from 'react-native';
 
-import './config/ReactotronConfig';
-
-import Routes from './index.js';
+import Main from './pages/main';
 
 const App = () => (
   <>
     <StatusBar barStyle="light-content" backgroundColor="#8b10ae" />
-    <Routes />
+    <Main />
   </>
 );
 
