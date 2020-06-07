@@ -20,12 +20,11 @@ export const Content = styled.View`
 
 export const Menu = styled(Animated.View)``;
 
-export const Card = styled(Animated.View)`
+export const Card = styled.View`
   flex: 1;
   background: #fff;
-  border-radius: 5px;
+  border-radius: 7px;
   margin: 0 20px;
-  height: 100%;
   position: absolute;
   left: 0;
   right: 0;

@@ -50,14 +50,14 @@ const Main = () => {
         offset = 0;
         translationY.setOffset(offset);
       }
-      Animated.timing(translateY, {
+      Animated.timing(translY, {
         toValue: opened ? 380 : 0,
         duration: 250,
         useNativeDriver: true,
       }).start(() => {
         offset = opened ? 380 : 0;
-        translateY.setOffset(offset);
-        translateY.setValue(0);
+        translY.setOffset(offset);
+        translY.setValue(0);
       });
     }
   };
@@ -71,35 +71,20 @@ const Main = () => {
           <PanGestureHandler
             onHandlerStateChange={MyOnHandlerStateChange}
             onGestureEvent={animatedEvent}>
-            <Menu>
-              <Card
-                style={{
-                  transform: [
-                    {
-                      translateY: translY.interpolate({
-                        inputRange: [-300, 0, 380],
-                        outputRange: [-50, 0, 380],
-                        extrapolate: 'clamp',
-                      }),
-                    },
-                  ],
-                }}>
-                <CardHeader>
-                  <Icon name="attach-money" size={28} color="#666" />
-                  <Icon name="visibility-off" size={28} color="#666" />
-                </CardHeader>
-                <CardContent>
-                  <Title>Saldo disponível</Title>
-                  <Description>R$ 375.518,87</Description>
-                </CardContent>
-                <CardFooter>
-                  <Icon name="arrow-downward" size={12} color="#666" />
-                  <Notices>
-                    Transferência de R$ 200,00 recebida de Matheus Abreu
-                  </Notices>
-                </CardFooter>
-              </Card>
-            </Menu>
+            <Menu
+              style={{
+                transform: [
+                  {
+                    translateY: translY.interpolate({
+                      inputRange: [-300, 0, 380],
+                      outputRange: [-50, 0, 380],
+                      extrapolate: 'clamp',
+                    }),
+                  },
+                ],
+              }}
+            />
+            <Nuconta />
           </PanGestureHandler>
         </Content>
         <Tabs translY={translY} />
@@ -108,7 +93,22 @@ const Main = () => {
   );
 };
 
-const Nuconta = () => <></>;
+const Nuconta = () => (
+  <Card>
+    <CardHeader>
+      <Icon name="attach-money" size={28} color="#666" />
+      <Icon name="visibility-off" size={28} color="#666" />
+    </CardHeader>
+    <CardContent>
+      <Title>Saldo disponível</Title>
+      <Description>R$ 375.518,87</Description>
+    </CardContent>
+    <CardFooter>
+      <Icon name="arrow-downward" size={12} color="#666" />
+      <Notices>Transferência de R$ 200,00 recebida de Matheus Abreu</Notices>
+    </CardFooter>
+  </Card>
+);
 const Nucredito = () => <></>;
 const Nurewards = () => <></>;
 
