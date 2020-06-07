@@ -27,6 +27,15 @@ const Tabs = ({translY}) => {
   return (
     <Container
       style={{
+        transform: [
+          {
+            translateY: translY.interpolate({
+              inputRange: [0, 380],
+              outputRange: [0, 30],
+              extrapolate: 'clamp',
+            }),
+          },
+        ],
         opacity: translY.interpolate({
           inputRange: [0, 380],
           outputRange: [1, 0.3],

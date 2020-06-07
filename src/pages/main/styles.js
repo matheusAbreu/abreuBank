@@ -1,11 +1,6 @@
 import {Animated} from 'react-native';
 import styled from 'styled-components/native';
 
-export const SafeAreaView = styled.SafeAreaView`
-  flex: 1;
-  background: #8b10ae;
-`;
-
 export const Container = styled.View`
   flex: 1;
   background: #8b10ae;
@@ -18,14 +13,13 @@ export const Content = styled.View`
   z-index: 5;
 `;
 
-export const Menu = styled(Animated.View)``;
-
-export const Card = styled.View`
-  flex: 1;
+export const Card = styled(Animated.View)`
   background: #fff;
   border-radius: 7px;
   margin: 0 20px;
+  flex: 1;
   position: absolute;
+  height: 100%;
   left: 0;
   right: 0;
   top: 0px;

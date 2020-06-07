@@ -17,7 +17,6 @@ import {
   Notices,
   Title,
   Menu,
-  SafeAreaView,
 } from './styles';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -37,7 +36,7 @@ const Main = () => {
     {useNativeDriver: true},
   );
 
-  var MyOnHandlerStateChange = (event) => {
+  const MyOnHandlerStateChange = (event) => {
     if (event.nativeEvent.oldState === State.ACTIVE) {
       let opened = false;
       const {translationY} = event.nativeEvent;
@@ -46,9 +45,9 @@ const Main = () => {
       if (translationY >= 100) {
         opened = true;
       } else {
-        translationY.setValue(offset);
+        translY.setValue(offset);
         offset = 0;
-        translationY.setOffset(offset);
+        translY.setOffset(0);
       }
       Animated.timing(translY, {
         toValue: opened ? 380 : 0,
@@ -63,7 +62,7 @@ const Main = () => {
   };
 
   return (
-    <SafeAreaView>
+    <>
       <Container>
         <Header translY={translY} />
         <Content>
@@ -71,44 +70,42 @@ const Main = () => {
           <PanGestureHandler
             onHandlerStateChange={MyOnHandlerStateChange}
             onGestureEvent={animatedEvent}>
-            <Menu
+            <Card
               style={{
                 transform: [
                   {
                     translateY: translY.interpolate({
-                      inputRange: [-300, 0, 380],
+                      inputRange: [-200, 0, 380],
                       outputRange: [-50, 0, 380],
                       extrapolate: 'clamp',
                     }),
                   },
                 ],
-              }}
-            />
-            <Nuconta />
+              }}>
+              <CardHeader>
+                <Icon name="attach-money" size={28} color="#666" />
+                <Icon name="visibility-off" size={28} color="#666" />
+              </CardHeader>
+              <CardContent>
+                <Title>Saldo disponível</Title>
+                <Description>R$ 375.518,87</Description>
+              </CardContent>
+              <CardFooter>
+                <Icon name="arrow-downward" size={12} color="#666" />
+                <Notices>
+                  Transferência de R$ 200,00 recebida de Matheus Abreu
+                </Notices>
+              </CardFooter>
+            </Card>
           </PanGestureHandler>
         </Content>
         <Tabs translY={translY} />
       </Container>
-    </SafeAreaView>
+    </>
   );
 };
 
-const Nuconta = () => (
-  <Card>
-    <CardHeader>
-      <Icon name="attach-money" size={28} color="#666" />
-      <Icon name="visibility-off" size={28} color="#666" />
-    </CardHeader>
-    <CardContent>
-      <Title>Saldo disponível</Title>
-      <Description>R$ 375.518,87</Description>
-    </CardContent>
-    <CardFooter>
-      <Icon name="arrow-downward" size={12} color="#666" />
-      <Notices>Transferência de R$ 200,00 recebida de Matheus Abreu</Notices>
-    </CardFooter>
-  </Card>
-);
+const Nuconta = () => <></>;
 const Nucredito = () => <></>;
 const Nurewards = () => <></>;
 

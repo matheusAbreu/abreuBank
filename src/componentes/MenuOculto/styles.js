@@ -35,13 +35,13 @@ export const NavText = styled.Text`
 `;
 
 export const SingOutButton = styled.TouchableOpacity`
-  border-width: ${StyleSheet.hairlineWidth}px;
+  border-width: 0.75px;
   border-color: rgba(255, 255, 255, 0.8);
   border-radius: 4px;
   align-self: stretch;
   justify-content: center;
   align-items: center;
-  padding: 12px;
+  padding: 10px;
   margin-top: 15px;
 `;
 
