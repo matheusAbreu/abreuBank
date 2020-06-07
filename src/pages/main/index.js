@@ -70,7 +70,7 @@ const Main = () => {
           <PanGestureHandler
             onHandlerStateChange={MyOnHandlerStateChange}
             onGestureEvent={animatedEvent}>
-            <Card
+            <Menu
               style={{
                 transform: [
                   {
@@ -82,21 +82,9 @@ const Main = () => {
                   },
                 ],
               }}>
-              <CardHeader>
-                <Icon name="attach-money" size={28} color="#666" />
-                <Icon name="visibility-off" size={28} color="#666" />
-              </CardHeader>
-              <CardContent>
-                <Title>Saldo disponível</Title>
-                <Description>R$ 375.518,87</Description>
-              </CardContent>
-              <CardFooter>
-                <Icon name="arrow-downward" size={12} color="#666" />
-                <Notices>
-                  Transferência de R$ 200,00 recebida de Matheus Abreu
-                </Notices>
-              </CardFooter>
-            </Card>
+              <Nucredito />
+              <Nuconta />
+            </Menu>
           </PanGestureHandler>
         </Content>
         <Tabs translY={translY} />
@@ -105,8 +93,53 @@ const Main = () => {
   );
 };
 
-const Nuconta = () => <></>;
-const Nucredito = () => <></>;
-const Nurewards = () => <></>;
+const Nuconta = () => (
+  <Card>
+    <CardHeader>
+      <Icon name="attach-money" size={28} color="#666" />
+      <Icon name="visibility-off" size={28} color="#666" />
+    </CardHeader>
+    <CardContent>
+      <Title>Saldo disponível</Title>
+      <Description>R$ 375.518,87</Description>
+    </CardContent>
+    <CardFooter>
+      <Icon name="arrow-downward" size={12} color="#666" />
+      <Notices>Transferência de R$ 200,00 recebida de Matheus Abreu</Notices>
+    </CardFooter>
+  </Card>
+);
+const Nucredito = () => (
+  <Card>
+    <CardHeader>
+      <Icon name="attach-money" size={28} color="#666" />
+      <Icon name="visibility-off" size={28} color="#666" />
+    </CardHeader>
+    <CardContent>
+      <Title>Saldo disponível</Title>
+      <Description>R$ 375.518,87</Description>
+    </CardContent>
+    <CardFooter>
+      <Icon name="arrow-downward" size={12} color="#666" />
+      <Notices>Transferência de R$ 200,00 recebida de Matheus Abreu</Notices>
+    </CardFooter>
+  </Card>
+);
+const Nurewards = () => (
+  <Card>
+    <CardHeader>
+      <Icon name="attach-money" size={28} color="#666" />
+      <Icon name="visibility-off" size={28} color="#666" />
+    </CardHeader>
+    <CardContent>
+      <Title>Saldo disponível</Title>
+      <Description>R$ 375.518,87</Description>
+    </CardContent>
+    <CardFooter>
+      <Icon name="arrow-downward" size={12} color="#666" />
+      <Notices>Transferência de R$ 200,00 recebida de Matheus Abreu</Notices>
+    </CardFooter>
+  </Card>
+);
 
 export default Main;

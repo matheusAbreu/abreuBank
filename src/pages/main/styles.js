@@ -13,12 +13,19 @@ export const Content = styled.View`
   z-index: 5;
 `;
 
-export const Card = styled(Animated.View)`
-  background: #fff;
-  border-radius: 7px;
-  margin: 0 20px;
+export const Menu = styled(Animated.View)`
   flex: 1;
   position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0px;
+`;
+
+export const Card = styled.View`
+  background: #fff;
+  border-radius: 7px;
+  margin: 5px 20px;
   height: 100%;
   left: 0;
   right: 0;

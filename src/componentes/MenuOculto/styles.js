@@ -13,6 +13,15 @@ export const Code = styled.View`
   background: #fff;
   padding: 0.5px;
 `;
+export const CodeText = styled.Text`
+  color: #fff;
+  font-size: 12px;
+  border: none;
+  background: transparent;
+`;
+export const B = styled.Text`
+  font-weight: bold;
+`;
 
 export const Nav = styled.View`
   margin-top: 30px;
@@ -21,8 +30,15 @@ export const Nav = styled.View`
   border-top-color: rgba(255, 255, 255, 0.8);
 `;
 
+export const NavColapse = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
+
 export const NavItem = styled.View`
   flex-direction: row;
+  justify-content: space-between;
+
   align-items: center;
   padding: 12px 0;
   border-bottom-width: ${StyleSheet.hairlineWidth}px;
@@ -42,7 +58,7 @@ export const SingOutButton = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   padding: 10px;
-  margin-top: 15px;
+  margin: 23px 0;
 `;
 
 export const SingOutButtonText = styled.Text`
