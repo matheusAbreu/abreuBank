@@ -24,6 +24,7 @@ export const Menu = styled(Animated.ScrollView)`
 
 export const Card = styled(Animated.View)`
   background: #fff;
+  font-family: Calibri;
   border-radius: 7px;
   margin: 5px 20px;
   height: 380px;
@@ -41,8 +42,7 @@ export const CardHeader = styled.View`
 
 export const CardContent = styled.View`
   flex: 1;
-  padding: 0 30px;
-  justify-content: center;
+  padding: 40px 30px;
 `;
 
 export const CardFooter = styled.View`
@@ -57,6 +57,10 @@ export const CardFooter = styled.View`
 export const B = styled.Text`
   font-weight: bold;
 `;
+export const BoldRewards = styled.Text`
+  font-weight: bold;
+  color: #8b10ae;
+`;
 
 export const TitleCredit = styled.Text`
   font-size: 14px;
@@ -66,10 +70,25 @@ export const DescriptionCredit = styled.Text`
   font-size: 32px;
   color: #229FE0;
 `;
+export const DescriptionRewards = styled.Text`
+  font-size: 30px;
+  color: #8b10ae;
+  padding: 5px 0;
+`;
+export const BalanceRewards = styled.Text`
+  font-size: 14px;
+  padding-left: 8px;
+  font-weight: bold;
+  color: #8b10ae;
+`;
 export const Notices = styled.Text`
   font-size: 13px;
   color: #222;
   padding-left: 10px;
+`;
+export const NoticesContent = styled.Text`
+  font-size: 13px;
+  color: #222;
 `;
 export const BalanceCredit = styled.Text`
   font-size: 14px;
