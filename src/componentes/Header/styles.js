@@ -13,6 +13,8 @@ export const Top = styled.View`
 
 export const Logo = styled.Image``;
 
+export const ArrowButton = styled.TouchableOpacity``;
+
 export const Title = styled.Text`
   font-size: 18px;
   color: #fff;

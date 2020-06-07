@@ -82,7 +82,6 @@ const Main = () => {
                   },
                 ],
               }}>
-              <Nucredito />
               <Nuconta />
             </Menu>
           </PanGestureHandler>
