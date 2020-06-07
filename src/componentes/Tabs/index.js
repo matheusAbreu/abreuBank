@@ -2,17 +2,9 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {Container, TabsContainer, TabItem, TabText} from './styles';
-
-const valorItem = (strIcon, strValor) => {
-  //um obj auxiliar para preenchimento do item
-  return {
-    icone: strIcon,
-    texto: strValor,
-  };
-};
+import {valorItem} from '../utils/index';
 
 const listaitens = () => {
-  //Aqui de fato é onde eu informo os itens. o retorno em lista pra facilitar a criação do componente
   return [
     valorItem('person-add', 'Indicar amigos'),
     valorItem('chat-bubble-outline', 'Cobrar'),

@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from '../../componentes/Header';
 import Tabs from '../../componentes/Tabs';
+import MenuOculto from '../../componentes/MenuOculto';
 
 import {
   Container,
@@ -23,6 +24,7 @@ export default function Main() {
       <Container>
         <Header />
         <Content>
+          <MenuOculto />
           <Card>
             <CardHeader>
               <Icon name="attach-money" size={28} color="#666" />
