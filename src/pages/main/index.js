@@ -23,7 +23,12 @@ import {
   HeaderTitle,
   NoticesContent,
   BoldRewards,
+  NivelCredit,
+  CardContentColumn,
   B,
+  NivelCreditDisponivel,
+  NivelCreditAtual,
+  CardColapseCredit,
   CardColapse,
 } from './styles';
 
@@ -75,24 +80,30 @@ const Nuconta = () => {
 };
 const Nucredito = () => (
   <Card>
-    <>
-      <CardHeader>
-        <CardColapse>
-          <Icon name="credit-card" size={28} color="#666" />
-          <HeaderTitle>Cartão de Crédito</HeaderTitle>
-        </CardColapse>
-      </CardHeader>
-      <CardContent>
-        <TitleCredit>Fatura Atual</TitleCredit>
-        <DescriptionCredit>
-          R$ <B>5.548</B>,87
-        </DescriptionCredit>
-        <SubTitle>
-          <NoticesContent>Limite disponível</NoticesContent>
-          <BalanceCredit>R$ 65.489,58</BalanceCredit>
-        </SubTitle>
-      </CardContent>
-    </>
+    <CardColapseCredit>
+      <CardContentColumn>
+        <CardHeader>
+          <CardColapse>
+            <Icon name="credit-card" size={28} color="#666" />
+            <HeaderTitle>Cartão de Crédito</HeaderTitle>
+          </CardColapse>
+        </CardHeader>
+        <CardContent>
+          <TitleCredit>Fatura Atual</TitleCredit>
+          <DescriptionCredit>
+            R$ <B>5.548</B>,87
+          </DescriptionCredit>
+          <SubTitle>
+            <NoticesContent>Limite disponível</NoticesContent>
+            <BalanceCredit>R$ 65.489,58</BalanceCredit>
+          </SubTitle>
+        </CardContent>
+      </CardContentColumn>
+      <NivelCredit>
+        <NivelCreditDisponivel />
+        <NivelCreditAtual />
+      </NivelCredit>
+    </CardColapseCredit>
     <CardFooter>
       <CardColapse>
         <IconAnt name="bus-alt" size={20} color="#666" />
