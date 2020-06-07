@@ -38,7 +38,6 @@ export const NavColapse = styled.View`
 export const NavItem = styled.View`
   flex-direction: row;
   justify-content: space-between;
-
   align-items: center;
   padding: 12px 0;
   border-bottom-width: ${StyleSheet.hairlineWidth}px;

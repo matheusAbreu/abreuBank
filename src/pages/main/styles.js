@@ -26,7 +26,7 @@ export const Card = styled(Animated.View)`
   background: #fff;
   border-radius: 7px;
   margin: 5px 20px;
-  height: 400px;
+  height: 380px;
   left: 0;
   right: 0;
   top: 0px;
@@ -54,15 +54,47 @@ export const CardFooter = styled.View`
   border-radius: 4px;
 `;
 
-export const Notices = styled.Text`
-  padding-left: 10px;
-  font-size: 12px;
-  color: #333;
+export const B = styled.Text`
+  font-weight: bold;
 `;
 
+export const TitleCredit = styled.Text`
+  font-size: 14px;
+  color: #229FE0;
+`;
+export const DescriptionCredit = styled.Text`
+  font-size: 32px;
+  color: #229FE0;
+`;
+export const Notices = styled.Text`
+  font-size: 13px;
+  color: #222;
+  padding-left: 10px;
+`;
+export const BalanceCredit = styled.Text`
+  font-size: 14px;
+  padding-left: 8px;
+  font-weight: bold;
+  color: #3DD629;
+`;
+
+export const CardColapse = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
 export const Title = styled.Text`
   font-size: 14px;
   color: #999;
+`;
+export const HeaderTitle = styled.Text`
+  font-size: 17px;
+  padding-left: 10px;
+  color: #666;
+`;
+
+export const SubTitle = styled.View`
+  flex-direction: row;
+  align-items: center;
 `;
 
 export const Description = styled.Text`
