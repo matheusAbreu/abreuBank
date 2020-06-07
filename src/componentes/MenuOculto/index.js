@@ -1,6 +1,14 @@
 import React from 'react';
 
-import {Container, Code, Nav, NavItem, NavText, SingOutButton, SingOutButtonText} from './styles';
+import {
+  Container,
+  Code,
+  Nav,
+  NavItem,
+  NavText,
+  SingOutButton,
+  SingOutButtonText,
+} from './styles';
 import IconAnt from 'react-native-vector-icons/AntDesign';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
