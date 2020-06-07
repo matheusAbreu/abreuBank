@@ -23,9 +23,16 @@ const listaitens = () => {
   ];
 };
 
-const Tabs = () => {
+const Tabs = ({translY}) => {
   return (
-    <Container>
+    <Container
+      style={{
+        opacity: translY.interpolate({
+          inputRange: [0, 380],
+          outputRange: [1, 0.3],
+          extrapolate: 'clamp',
+        }),
+      }}>
       <TabsContainer>
         {listaitens().map((item, index) => {
           return (

@@ -23,9 +23,15 @@ const listaitens = () => {
   ];
 };
 
-const MenuOculto = () => {
+const MenuOculto = ({translY}) => {
   return (
-    <Container>
+    <Container
+      style={{
+        opacity: translY.interpolate({
+          inputRange: [0, 150],
+          outputRange: [0, 1],
+        }),
+      }}>
       <Code>
         <IconAnt name="qrcode" size={80} color="#8b10ae" />
       </Code>
