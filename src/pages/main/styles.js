@@ -13,7 +13,7 @@ export const Content = styled.View`
   z-index: 5;
 `;
 
-export const Menu = styled(Animated.View)`
+export const Menu = styled(Animated.ScrollView)`
   flex: 1;
   position: absolute;
   height: 100%;
@@ -22,11 +22,11 @@ export const Menu = styled(Animated.View)`
   top: 0px;
 `;
 
-export const Card = styled.View`
+export const Card = styled(Animated.View)`
   background: #fff;
   border-radius: 7px;
   margin: 5px 20px;
-  height: 100%;
+  height: 400px;
   left: 0;
   right: 0;
   top: 0px;
